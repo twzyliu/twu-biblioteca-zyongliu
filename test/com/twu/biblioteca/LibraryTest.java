@@ -14,6 +14,7 @@ import static org.junit.Assert.assertNull;
  */
 public class LibraryTest {
     Library library;
+
     @Before
     public void setUp() throws Exception {
         library = new Library();

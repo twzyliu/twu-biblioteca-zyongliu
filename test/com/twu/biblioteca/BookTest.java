@@ -2,7 +2,6 @@ package com.twu.biblioteca;
 
 import com.twu.biblioteca.Domain.Author;
 import com.twu.biblioteca.Domain.Book;
-import com.twu.biblioteca.Domain.BookList;
 import com.twu.biblioteca.Domain.ProductionList;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +23,7 @@ public class BookTest {
         authors.add(new Author("James Whittaker"));
         authors.add(new Author("Jason Arbob"));
         authors.add(new Author("Jeff Carollo"));
-        String id = ProductionList.createObjectID();
+        String id = ProductionList.createProductionID();
         book = new Book(id, "How Google Tests Software", authors, 2012);
     }
 
@@ -45,7 +44,7 @@ public class BookTest {
 
     @Test
     public void getPublishYear() throws Exception {
-        assertEquals(2012, book.getPublishYear());
+        assertEquals(2012, book.getYear());
     }
 
     @Test

@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.Domain.BookList;
+import com.twu.biblioteca.Domain.ProductionList;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,7 +27,7 @@ public class BookListPanel extends JPanel{
 
         //add book lists
         productionTableModel = new ProductionTableModel();
-        productionTableModel.setProductions(ProductionList.getAvailableObjects());
+        productionTableModel.setProductions(ProductionList.getAvailableProductions());
         bookListTable = new JTable(productionTableModel);
         JScrollPane scrollPane = new JScrollPane(bookListTable);
         this.add(scrollPane);

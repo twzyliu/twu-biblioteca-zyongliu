@@ -2,6 +2,7 @@ package com.twu.biblioteca;
 
 import com.twu.biblioteca.Domain.Book;
 import com.twu.biblioteca.Domain.BookList;
+import com.twu.biblioteca.Domain.ProductionList;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -15,7 +16,7 @@ public class BookTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Book book = (Book)ProductionList.getProduction(productions.get(rowIndex));
+        Book book = (Book) ProductionList.getProduction(productions.get(rowIndex));
         switch(columnIndex) {
             case 0: return book.getId();
             case 1: return book.getName();
@@ -23,6 +24,11 @@ public class BookTableModel extends AbstractTableModel {
             case 3: return book.getYear();
             default: return null;
         }
+    }
+
+    @Override
+    public int getRowCount() {
+        return 0;
     }
 
     @Override
