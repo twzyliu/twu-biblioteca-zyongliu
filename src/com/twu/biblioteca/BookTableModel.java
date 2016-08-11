@@ -1,5 +1,8 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Domain.Book;
+import com.twu.biblioteca.Domain.BookList;
+
 import javax.swing.table.AbstractTableModel;
 
 /**

@@ -1,4 +1,6 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Domain;
+
+import com.twu.biblioteca.MessageDialog;
 
 import javax.swing.*;
 import java.util.ArrayList;

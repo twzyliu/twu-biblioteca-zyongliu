@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Domain.BookList;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Domain;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ public class Book {
     private int state;
     private String id;
 
-    public Book(String id, String name, List<Author> authors, int publishYear) {
+    public Book(String id, String name,  List<Author> authors, int publishYear) {
         this.id = id;
         this.name = name;
         this.authors = authors;
@@ -22,6 +22,10 @@ public class Book {
 
     public String getName() {
         return name;
+    }
+
+    public List<Author> getAuthor() {
+        return authors;
     }
 
     public String getAuthorName() {

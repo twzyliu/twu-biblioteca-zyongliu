@@ -1,5 +1,8 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Domain.Author;
+import com.twu.biblioteca.Domain.Book;
+import com.twu.biblioteca.Domain.BookList;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Domain.BookList;
 import org.junit.Test;
 
 import java.util.Arrays;
