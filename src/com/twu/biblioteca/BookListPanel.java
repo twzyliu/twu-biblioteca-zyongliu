@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  */
 public class BookListPanel extends JPanel{
     private JTable bookListTable;
-    private BookTableModel bookTableModel;
+    private ProductionTableModel productionTableModel;
     private JPanel buttonPanel;
     private JButton checkoutButton;
     private JButton returnButton;
@@ -26,9 +26,9 @@ public class BookListPanel extends JPanel{
         setLayout(new BorderLayout());
 
         //add book lists
-        bookTableModel = new BookTableModel();
-        bookTableModel.setBooks(BookList.getAvailableBooks());
-        bookListTable = new JTable(bookTableModel);
+        productionTableModel = new ProductionTableModel();
+        productionTableModel.setProductions(ProductionList.getAvailableObjects());
+        bookListTable = new JTable(productionTableModel);
         JScrollPane scrollPane = new JScrollPane(bookListTable);
         this.add(scrollPane);
 
@@ -47,8 +47,8 @@ public class BookListPanel extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 int rowIndex = bookListTable.getSelectedRow();
-                bookTableModel.deleteRow(rowIndex);
-                //System.out.println("the books size after checkout:" + BookList.getTotalCount());
+                productionTableModel.deleteRow(rowIndex);
+                //System.out.println("the books size after checkout:" + ProductionList.getTotalCount());
             }
         });
 
@@ -74,8 +74,8 @@ public class BookListPanel extends JPanel{
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         String id = bookIDTextField.getText();
-                        bookTableModel.addRow(id);
-                        //System.out.println("the books size after return:" + BookList.getTotalCount());
+                        productionTableModel.addRow(id);
+                        //System.out.println("the books size after return:" + ProductionList.getTotalCount());
                         returnDialog.setVisible(false);
                     }
                 });
